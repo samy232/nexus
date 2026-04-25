@@ -21,7 +21,7 @@ const Header = () => {
             <User size={20} />
           </div>
           <div className="user-info">
-            <span className="user-name">Alex Denton</span>
+            <span className="user-name">Salamani Samy</span>
             <span className="user-role">Pro Trader</span>
           </div>
         </div>
