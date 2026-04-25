@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/layout/DashboardLayout.css"],"sourcesContent":[".layout-container {\n  display: flex;\n  min-height: 100vh;\n}\n\n.main-content {\n  flex: 1;\n  margin-left: 260px; /* Width of sidebar */\n  padding: 0 32px 32px;\n  display: flex;\n  flex-direction: column;\n}\n\n.content-wrapper {\n  flex: 1;\n  animation: fadeIn 0.8s ease forwards;\n}\n\n/* Responsive */\n@media (max-width: 1024px) {\n  .main-content {\n    margin-left: 80px; /* Collapsed sidebar width for tablet */\n  }\n}\n\n@media (max-width: 768px) {\n  .main-content {\n    margin-left: 0;\n    padding: 0 16px 16px;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;AAQA;;;;;AAMA;EACE;;;;;AAKF;EACE"}}]
+}

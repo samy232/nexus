@@ -1,11 +1,35 @@
 "use client";
 
+import { useSession } from 'next-auth/react';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import StatCard from '../components/widgets/StatCard';
 import ActivityChart from '../components/widgets/ActivityChart';
 import RecentTransactions from '../components/widgets/RecentTransactions';
 
 function App() {
+  const { data: session, status } = useSession();
+
+  if (status === "loading") {
+    return (
+      <DashboardLayout>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color: 'var(--text-secondary)' }}>
+          Loading dashboard...
+        </div>
+      </DashboardLayout>
+    );
+  }
+
+  if (!session) {
+    return (
+      <DashboardLayout>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', color: 'var(--text-secondary)' }}>
+          <h2 style={{ color: 'var(--text-primary)', marginBottom: '16px' }}>Welcome to Nexus</h2>
+          <p>Please log in using the sidebar to view your analytics and transactions.</p>
+        </div>
+      </DashboardLayout>
+    );
+  }
+
   return (
     <DashboardLayout>
       <div className="dashboard-grid" style={{

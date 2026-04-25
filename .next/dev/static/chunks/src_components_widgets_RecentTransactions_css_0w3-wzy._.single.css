@@ -1,0 +1,109 @@
+/* [project]/src/components/widgets/RecentTransactions.css [app-client] (css) */
+.recent-transactions {
+  flex-direction: column;
+  padding: 24px;
+  display: flex;
+}
+
+.transactions-header {
+  margin-bottom: 20px;
+}
+
+.transactions-header h3 {
+  color: var(--text-main);
+  font-size: 18px;
+}
+
+.view-all {
+  color: var(--primary);
+  transition: var(--transition);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.view-all:hover {
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.transactions-list {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.transaction-item {
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  opacity: 0;
+  background: #ffffff05;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  animation: .5s forwards slideUp;
+  display: flex;
+}
+
+.transaction-item:hover {
+  background: #ffffff0d;
+  transform: translateX(4px);
+}
+
+.tx-icon {
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-main {
+  color: var(--text-main);
+}
+
+.tx-details {
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  display: flex;
+}
+
+.tx-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tx-date {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.tx-amounts {
+  text-align: right;
+  flex-direction: column;
+  gap: 4px;
+  display: flex;
+}
+
+.tx-primary {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tx-secondary {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=src_components_widgets_RecentTransactions_css_0w3-wzy._.single.css.map*/

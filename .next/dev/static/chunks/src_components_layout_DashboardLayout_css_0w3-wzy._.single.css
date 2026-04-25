@@ -1,0 +1,33 @@
+/* [project]/src/components/layout/DashboardLayout.css [app-client] (css) */
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.main-content {
+  flex-direction: column;
+  flex: 1;
+  margin-left: 260px;
+  padding: 0 32px 32px;
+  display: flex;
+}
+
+.content-wrapper {
+  flex: 1;
+  animation: .8s forwards fadeIn;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 0 16px 16px;
+  }
+}
+
+/*# sourceMappingURL=src_components_layout_DashboardLayout_css_0w3-wzy._.single.css.map*/

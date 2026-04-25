@@ -1,0 +1,82 @@
+/* [project]/src/components/widgets/StatCard.css [app-client] (css) */
+.stat-card {
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-title {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stat-change {
+  border-radius: 20px;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+}
+
+.stat-change.positive {
+  color: var(--success);
+  background: #00ff9d1a;
+}
+
+.stat-change.negative {
+  color: var(--danger);
+  background: #ff00551a;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.stat-chart-mockup {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.sparkline {
+  border-radius: 2px;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.spark-up {
+  background: linear-gradient(90deg, transparent, var(--success));
+  box-shadow: 0 -4px 12px var(--success);
+}
+
+.spark-down {
+  background: linear-gradient(90deg, transparent, var(--danger));
+  box-shadow: 0 -4px 12px var(--danger);
+}
+
+.stat-card:after {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(to top, #ffffff05, #0000);
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=src_components_widgets_StatCard_css_0w3-wzy._.single.css.map*/

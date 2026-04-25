@@ -60,6 +60,8 @@ model Transaction {
   id          String   @id @default(cuid())
   userId      String
   amount      Float
+  asset       String   // e.g., "ETH", "BTC"
+  usdValue    Float    // e.g., 1500.00
   type        String   // e.g., "deposit", "withdrawal", "trade"
   status      String   @default("completed")
   createdAt   DateTime @default(now())

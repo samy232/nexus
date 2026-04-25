@@ -1,0 +1,170 @@
+/* [project]/src/components/widgets/ActivityChart.css [app-client] (css) */
+.activity-chart {
+  flex-direction: column;
+  grid-column: span 2;
+  padding: 24px;
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .activity-chart {
+    grid-column: span 1;
+  }
+}
+
+.chart-header {
+  margin-bottom: 24px;
+}
+
+.chart-header h3 {
+  color: var(--text-main);
+  font-size: 18px;
+}
+
+.chart-tabs {
+  background: #0003;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+}
+
+.tab {
+  color: var(--text-muted);
+  transition: var(--transition);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tab:hover {
+  color: var(--text-main);
+}
+
+.tab.active {
+  background: var(--bg-panel);
+  color: var(--primary);
+  box-shadow: 0 2px 8px #0003;
+}
+
+.chart-container {
+  border-radius: 8px;
+  flex: 1;
+  min-height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-lines {
+  pointer-events: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.line {
+  background: var(--border-light);
+  opacity: .5;
+  width: 100%;
+  height: 1px;
+}
+
+.data-path {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.data-path svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line-stroke {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000px;
+  animation: 2s cubic-bezier(.2, .8, .2, 1) forwards drawLine;
+}
+
+.chart-area-fill {
+  opacity: 0;
+  animation: 1s 1s forwards fadeIn;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.data-points {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.point {
+  background: var(--bg-main);
+  border: 2px solid var(--primary);
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 10px var(--primary-glow);
+  opacity: 0;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  animation: .5s cubic-bezier(.175, .885, .32, 1.275) 2s forwards popIn;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.point:hover {
+  background: var(--primary);
+  transform: translate(-50%, -50%)scale(1.5);
+}
+
+.tooltip {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity .2s;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point:hover .tooltip {
+  opacity: 1;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1);
+  }
+}
+
+/*# sourceMappingURL=src_components_widgets_ActivityChart_css_0w3-wzy._.single.css.map*/
