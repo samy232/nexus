@@ -1,9 +1,9 @@
+"use client";
 
-import DashboardLayout from './components/layout/DashboardLayout';
-import StatCard from './components/widgets/StatCard';
-import ActivityChart from './components/widgets/ActivityChart';
-import RecentTransactions from './components/widgets/RecentTransactions';
-import './index.css';
+import DashboardLayout from '../components/layout/DashboardLayout';
+import StatCard from '../components/widgets/StatCard';
+import ActivityChart from '../components/widgets/ActivityChart';
+import RecentTransactions from '../components/widgets/RecentTransactions';
 
 function App() {
   return (
