@@ -1,4 +1,5 @@
 import './globals.css';
+import AuthProvider from '../components/providers/AuthProvider';
 
 export const metadata = {
   title: 'Nexus Dashboard',
@@ -9,7 +10,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div id="root">{children}</div>
+        <AuthProvider>
+          <div id="root">{children}</div>
+        </AuthProvider>
       </body>
     </html>
   );

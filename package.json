@@ -11,8 +11,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "latest",
+    "@auth/prisma-adapter": "^2.11.2",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "@types/pg": "^8.20.0",
     "lucide-react": "^1.11.0",
+    "next": "latest",
+    "next-auth": "^4.24.14",
+    "pg": "^8.20.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
@@ -22,6 +28,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^10.2.1",
     "eslint-config-next": "latest",
-    "globals": "^17.5.0"
+    "globals": "^17.5.0",
+    "prisma": "^7.8.0"
   }
 }
