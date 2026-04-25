@@ -36,6 +36,9 @@ const Sidebar = () => {
           <LogOut size={20} />
           <span>Logout</span>
         </button>
+        <div className="author-signature" style={{ marginTop: '20px', fontSize: '12px', color: 'var(--text-secondary)', textAlign: 'center', opacity: 0.7 }}>
+          Made by <br /><strong>salamani samy rayan</strong>
+        </div>
       </div>
     </aside>
   );

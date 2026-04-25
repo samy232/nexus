@@ -1,5 +1,6 @@
 {
   "name": "nexus-dashboard",
+  "author": "salamani samy rayan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
